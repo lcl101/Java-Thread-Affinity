@@ -312,6 +312,7 @@ public class AffinityLock implements Closeable {
     @Override
     public String toString() {
         StringBuilder sb = new StringBuilder();
+        sb.append("cpuid="+this.cpuId());
         if (assignedThread != null)
             sb.append(assignedThread).append(" alive=").append(assignedThread.isAlive());
         else if (reservable)
